@@ -1,0 +1,107 @@
+.nav {
+    right: 0;
+    bottom: 0;
+    position: fixed;
+}
+
+.character {
+    width: 350px;
+    height: 420px;
+}
+
+.zhende {
+    background: url("../img/63660241_0.png") no-repeat -15px 0px;
+}
+
+.zhende:hover {
+    background-position: -370px 0px;
+}
+
+.character a {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-size: 100%;
+    transition: opacity 2s ease;
+}
+
+.saber {
+    background: url("../img/star01.png");
+}
+
+.archer {
+    background: url("../img/star02.png");
+}
+
+.lancer {
+    background: url("../img/star03.png");
+}
+
+.rider {
+    background: url("../img/star05.png");
+}
+
+.caster {
+    background: url("../img/star04.png");
+}
+
+.assassin {
+    background: url("../img/star07.png");
+}
+
+.berserker {
+    background: url("../img/star06.png");
+}
+
+.frame {
+    position: relative;
+    background: url("../img/balloon_pink.png") no-repeat 0px -10px;
+    z-index: 1;
+}
+
+.frame::before {
+    content: "";
+    position: absolute;
+    top: -10;
+    width: 400px;
+    height: 10px;
+    background: url("../img/balloon_pink.png") no-repeat 0px 0px;
+}
+
+.frame::after {
+    content: "";
+    position: absolute;
+    bottom: -10;
+    width: 400px;
+    height: 10px;
+    background: url("../img/balloon_pink.png") no-repeat 0px -490px;
+}
+
+.inner {}
+
+.talk {
+    padding: 0 10px;
+}
+
+.next {
+    border-right: 5px solid transparent;
+    border-top: 10px solid orange;
+    border-left: 5px solid transparent;
+    width: 0px;
+    position: relative;
+    bottom: 0;
+    right: -320;
+    animation: next 2s infinite;
+}
+
+@keyframes next {
+    0% {
+        bottom: 0
+    }
+    50% {
+        bottom: 10
+    }
+    100% {
+        bottom: 0
+    }
+}
