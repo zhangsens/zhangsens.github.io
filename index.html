@@ -13,12 +13,18 @@
 <body>
     <div>
         <div class="header">
-            <div style="text-align: left;">
-                <img src="https://avatars4.githubusercontent.com/u/19851888?v=4&s=460">
-            </div>
-            <div>
-                <span><a href="https://zhangsens.github.io">主页</a></span>
-                <span><a href="https://zhangsens.github.io/about">关于我</a></span>
+
+            <div class="header-background"></div>
+            <div class="header-nav">
+                <div class="header-profile">
+                    <a href="https://github.com/zhangsens">
+                        <img src="https://avatars4.githubusercontent.com/u/19851888?v=4&s=460">
+                    </a>
+                </div>
+                <ul>
+                    <li class="actived"><a href="https://zhangsens.github.io">主页</a></li>
+                    <li><a href="https://zhangsens.github.io/about">关于我</a></li>
+                </ul>
             </div>
         </div>
         <div class="body">
@@ -34,16 +40,16 @@
             </article>
         </div>
         <div class="footer">&copy;2017 write by Zhangs</div>
-        <div class="nav">
+        <div class="assisant">
         </div>
     </div>
 
     <script>
         new nav({
-            ele: document.querySelector(".nav")
+            ele: document.querySelector(".assisant")
         })
         document.addEventListener("visibilitychange", function() {
-            document.title = document.hidden ? "用户离开了" : "用户回来了";
+            document.title = document.hidden ? "目送你离开" : "开心看你回来";
         });
     </script>
 </body>
