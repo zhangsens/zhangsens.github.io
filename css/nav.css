@@ -13,8 +13,8 @@
     background: url("../img/63660241_0.png") no-repeat -15px 0px;
 }
 
-.zhende:hover {
-    background-position: -370px 0px;
+.zhende-black {
+    background: url("../img/63660241_0.png") no-repeat -370px 0px;
 }
 
 .character a {

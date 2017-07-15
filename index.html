@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="utf8" />
+    <title>Yolook's home</title>
+    <link rel="icon" href="">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/nav.css">
     <script src="js/nav.min.js"></script>
@@ -10,9 +12,28 @@
 
 <body>
     <div>
-        <div class="header"></div>
-        <div></div>
-        <div clss="footer"></div>
+        <div class="header">
+            <div style="text-align: left;">
+                <img src="https://avatars4.githubusercontent.com/u/19851888?v=4&s=460">
+            </div>
+            <div>
+                <span><a href="https://zhangsens.github.io">主页</a></span>
+                <span><a href="https://zhangsens.github.io/about">关于我</a></span>
+            </div>
+        </div>
+        <div class="body">
+            <article>
+                <header>
+                    <h2><a href="">正文一</a></h2>
+                </header>
+            </article>
+            <article>
+                <header>
+                    <h2><a href="">正文二</a></h2>
+                </header>
+            </article>
+        </div>
+        <div class="footer">&copy;2017 write by Zhangs</div>
         <div class="nav">
         </div>
     </div>
@@ -21,6 +42,9 @@
         new nav({
             ele: document.querySelector(".nav")
         })
+        document.addEventListener("visibilitychange", function() {
+            document.title = document.hidden ? "用户离开了" : "用户回来了";
+        });
     </script>
 </body>
 

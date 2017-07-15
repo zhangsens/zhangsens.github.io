@@ -15,5 +15,37 @@
 }
 
 body {
+    margin: 0;
+    padding: 0;
+    height: 1200px;
+}
+
+.header {
+    font-family: 幼圆;
+    font-size: 20px;
+    text-align: right;
     background-color: #66ccff;
+}
+
+.header img {
+    height: 5em;
+    width: 5em;
+}
+
+.header div {
+    line-height: 40px;
+}
+
+.body {}
+
+.body article {
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    margin: 20px 30px;
+    box-shadow: 0px 0px 10px #012345;
+}
+
+.footer {
+    font-family: cursive;
 }
