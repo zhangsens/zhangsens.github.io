@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+{% include header-home.html %}
+
+<div class="body">
+    <article>
+    	<header><h1>{{ post.title }}</h1></header>
+    	<hr>
+    	<div>{{ post.content }}</div>
+    </article>
+</div>
+
+{% include footer.html %}
+<div class="assisant">
+</div>
+
+<script>
+    new nav({
+        ele: document.querySelector(".assisant")
+    });
+</script>
