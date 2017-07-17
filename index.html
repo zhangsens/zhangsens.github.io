@@ -8,9 +8,10 @@ title: Yolook's home
 	<div class="article">
 		<header>
 	        <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+	        <small>{{ post.date | date:"%y-%m-%d"}}</small>
 	    </header>
 	    <hr>
-	        <div>{{ post.content }}</div>
+	    <div>{{ post.content }}</div>
 	</div>
 </article>
 {% endfor %}
