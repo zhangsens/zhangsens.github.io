@@ -14,7 +14,7 @@ function nav_3D(option) {
     var roll, speed;
     var rotateX, rotateY, clientX, clientY, target;
 
-    box.class = "nav-3d";
+    box.className = "nav-3d";
     ele.hi.className = "front";
     ele.hi.href = "javascript:;";
     ele.github.className = "back";
@@ -28,7 +28,7 @@ function nav_3D(option) {
     ele.steam.className = "down";
     ele.steam.href = "http://store.steampowered.com/";
     for (let name in ele) {
-        ele[name].innerHTML = `<img src="./ico/${name}.ico" alt="${name}">`;
+        ele[name].innerHTML = `<img src="../img/ico/${name}.ico" alt="${name}">`;
         box.appendChild(ele[name]);
     }
     var target = option.ele || body;
