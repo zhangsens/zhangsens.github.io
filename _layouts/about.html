@@ -2,6 +2,8 @@
 layout: default
 ---
 
+<link rel="stylesheet" type="text/css" href="{{ site,baseurl }}css/nav-3d.css">
+
 {% include header-about.html %}
 
 <div class="body">
@@ -9,14 +11,10 @@ layout: default
 </div>
 
 {% include footer.html %}
-<div class="assisant">
-</div>
 
-<script>
-    new nav({
-        ele: document.querySelector(".assisant")
-    });
-    // document.addEventListener("visibilitychange", function() {
-    //     document.title = document.hidden ? "目送你离开" : "开心看你回来";
-    // });
+<script type="text/javascript" src="{{ site,baseurl }}js/nav-3d.js"></script>
+<script type="text/javascript">
+	var nav = new nav_3D({
+		ele:document.body
+	})
 </script>

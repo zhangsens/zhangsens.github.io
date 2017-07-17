@@ -1,0 +1,75 @@
+.nav-3d {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    transform-style: preserve-3d;
+    bottom: 100;
+    right: 100;
+    margin: auto;
+}
+
+.nav-3d a {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 80px;
+    text-align: center;
+    border: 3px solid #000;
+    box-sizing: border-box;
+    transition: all 3s ease;
+}
+
+.nav-3d a img {
+    height: 100%;
+    width: 100%;
+}
+
+.nav-3d .front {
+    transform: translateZ(50px);
+}
+
+.nav-3d .front:hover {
+    transform: translateZ(80px);
+}
+
+.nav-3d .back {
+    transform: translateZ(-50px);
+}
+
+.nav-3d .back:hover {
+    transform: translateZ(-80px);
+}
+
+.nav-3d .left {
+    transform: translateX(50px) rotateY(90deg);
+}
+
+.nav-3d .left:hover {
+    transform: translateX(80px) rotateY(90deg);
+}
+
+.nav-3d .right {
+    transform: translateX(-50px) rotateY(-90deg);
+}
+
+.nav-3d .right:hover {
+    transform: translateX(-80px) rotateY(-90deg);
+}
+
+.nav-3d .up {
+    transform: translateY(50px) rotateX(90deg);
+}
+
+.nav-3d .up:hover {
+    transform: translateY(80px) rotateX(90deg);
+}
+
+.nav-3d .down {
+    transform: translateY(-50px) rotateX(-90deg);
+}
+
+.nav-3d .down:hover {
+    transform: translateY(-80px) rotateX(-90deg);
+}
