@@ -8,8 +8,8 @@
             </a>
         </div>
         <ul>
-            <li class="actived"><a href="https://zhangsens.github.io">主页</a></li>
-            <li><a href="https://zhangsens.github.io/about">关于我</a></li>
+            <li class="{% if page.list = 1 %}actived{% endif %}"><a href="https://zhangsens.github.io">主页</a></li>
+            <li class="{% if page.list = 2 %}actived{% endif %}"><a href="https://zhangsens.github.io/about">关于我</a></li>
         </ul>
     </div>
 </div>
