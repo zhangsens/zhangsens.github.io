@@ -1,0 +1,211 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <meta charset="utf8" />
+    <title>Yolook's Danmaku System</title>
+    <link rel="icon" href="https://github.com/zhangsens/3D-nav/blob/master/ico/hi.png?raw=true">
+    <link rel="stylesheet" href="https://zhangsens.github.io/css/index.css">
+    <link rel="stylesheet" href="https://zhangsens.github.io/css/nav.css">
+    <script src="https://zhangsens.github.io/js/nav.min.js"></script>
+    <script src="../js/cDraw.min.js"></script>
+    <style>
+        .danmaku {
+            width: 100%;
+            position: relative;
+        }
+        
+        .danmaku video {
+            background-color: #000000;
+        }
+        
+        .danmaku canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        
+        pre {
+            background-color: #f6f8fa;
+            padding: 0 30px;
+        }
+        
+        pre code {
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+
+        <div class="header-background"></div>
+        <div class="header-nav">
+            <div class="header-profile">
+                <a href="https://github.com/zhangsens">
+                    <img src="https://avatars4.githubusercontent.com/u/19851888?v=4&s=460">
+                </a>
+            </div>
+            <ul>
+                <li class="actived"><a href="https://zhangsens.github.io">主页</a></li>
+                <li><a href="https://zhangsens.github.io/about">关于我</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="body">
+        <article>
+            <div class="article">
+                <header>
+                    <h1>基于canvas的弹幕系统</h1>
+                </header>
+                <hr>
+                <div class="danmaku">
+                    <video src="https://gss3.baidu.com/6LZ0ej3k1Qd3ote6lo7D0j9wehsv/tieba-smallvideo/84_9ef80b410df47c8ba6478cbd4de3d610.mp4" width="600" height="400" controls=""></video>
+                    <canvas width="600" height="350"></canvas>
+                </div>
+                <div>
+                    <p>就是一个放弹幕的</p>
+                    <p style="color:red">*需配合播放器一同使用</p>
+                    <pre>
+                        <code>
+                            <br><span>var _danmaku = new cDraw({</span>
+                            <br>    <span>ele: //画布,</span>
+                            <br>    <span>media: //播放媒体,</span>
+                            <br>    <span>danmaku: //弹幕数据</span>
+                            <br><span>});</span>
+                        </code>
+                    </pre>
+                    <p>注:弹幕池为一次性的</p>
+                    <p>问:一次性？</p>
+                    <p>答:对，就是播放一次后就不会显示弹幕了</p>
+                    <p>问:那有屁用啊！！！</p>
+                    <p>答:不要着急，其实里面有一个.danmaku_sort_reset()用于重置弹幕池。上方红字也提到了要配合播放器使用，，在自己需要的时机重置后弹幕池，cDraw会找到你需要播放的弹幕进行显示</p>
+                    <p>例如本例子，视频播放结束后会重置弹幕池，再一次播放视频，看到的弹幕是和第一次一样的</p>
+                    <pre>
+                        <code>
+                            <br><span>video.addEventListener("ended", function() {</span>
+                            <br>    <span>video.currentTime = 0;</span>
+                            <br>    <span>_danmaku.danmaku_sort_reset();</span>
+                            <br><span>});</span>
+                        </code>
+                    </pre>
+                    <p>指的提醒的是一定要将video.currentTime在重置弹幕池前提前声明好</p>
+                </div>
+            </div>
+        </article>
+    </div>
+    <div class="footer">&copy;2017 write by Zhangs</div>
+    <div class="assisant"></div>
+    <script>
+        //弹幕数据模拟
+        var danmaku = [{
+            time: "1",
+            content: "草船"
+        }, {
+            time: "60",
+            content: "G胖还我血汗钱"
+        }, {
+            time: "4",
+            content: "神秘代码"
+        }, {
+            time: "16",
+            content: "赞美G胖"
+        }, {
+            time: "1",
+            content: "劲爆大象部落"
+        }, {
+            time: "0.5",
+            content: "看看"
+        }, {
+            time: "1.7",
+            content: "lol"
+        }, {
+            time: "41",
+            content: "ta"
+        }, {
+            time: "56",
+            content: "pa"
+        }, {
+            time: "25",
+            content: "2333"
+        }, {
+            time: "37",
+            content: "XD"
+        }, {
+            time: "17",
+            content: "( ⊙ o ⊙ )啊！"
+        }, {
+            time: "66",
+            content: "(⊙v⊙)嗯"
+        }, {
+            time: "78",
+            content: "(⊙o⊙)哦"
+        }, {
+            time: "33",
+            content: "_(:зゝ∠)_"
+        }, {
+            time: "46",
+            content: "_(:з」∠)_"
+        }, {
+            time: "62",
+            content: "╮(╯▽╰)╭"
+        }, {
+            time: "80",
+            content: "ohhhhh!!"
+        }, {
+            time: "19",
+            content: "("
+        }, {
+            time: "39",
+            content: "⁄(⁄ ⁄•⁄ω⁄•⁄ ⁄)⁄"
+        }, {
+            time: "53",
+            content: "↖(^ω^)↗"
+        }, {
+            time: "49",
+            content: "/(ㄒoㄒ)/~~"
+        }, {
+            time: "71",
+            content: "emmmmmmmm...."
+        }, {
+            time: "84",
+            content: ")"
+        }, ]
+    </script>
+    <script>
+        var video = document.querySelector("video");
+        var canvas = document.querySelector("canvas");
+        canvas.onclick = video.onclick = function() {
+            event.preventDefault();
+            if (video.paused) {
+                _danmaku.danmaku_sort_reset();
+                video.play();
+            } else {
+                _danmaku.danmaku_sort_reset();
+                video.pause();
+            }
+        };
+        video.addEventListener("ended", function() {
+            video.currentTime = 0;
+            _danmaku.danmaku_sort_reset();
+        });
+        // video.addEventListener("timeupdate", function() {
+        //     console.log(1);
+        // })
+        // video.addEventListener("play", function() {});
+        // video.addEventListener("playing", function() {});
+        // video.addEventListener("pause", function() {});
+        //弹幕配置
+        var _danmaku = new cDraw({
+            ele: document.querySelector("canvas"),
+            media: video,
+            danmaku: danmaku
+        });
+        //贞德
+        new nav({
+            ele: document.querySelector(".assisant")
+        });
+    </script>
+</body>
+
+</html>

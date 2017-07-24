@@ -1,0 +1,11 @@
+emmmmmmm.........其实最初只是想学canvas的一些交互的。当时也不知道自己在想什么，应该说是脑子一抽还是灵光乍现呢。反正就是感觉突然有了个大胆的想法————写弹幕吧，想着自己必须去实践一下才行，放下手上收集来的一些关于canvas的例子（沉迷canvas无法自拔），开始着手去写这个基于canvas的弹幕系统。
+
+canvas真的非常的好玩、方便（会沉迷其中不是没有道理的呢），能处理图片、视频，能加文字，还能做动画![img](https://github.com/zhangsens/zhangsens.github.io/blob/master/img/poi.jpg?raw=ture)
+
+从完成的效率来看比预期的要快（褒めて褒めてー♪）。不过也瞬间失去了目的，本来是想一边增加想要的功能一边写的。。。
+
+说了那么多废话，其实就是想卖卖萌XD
+
+详情内容看这里：
+
+demo(https://zhangsens.github.io/demo/danmaku.html)
