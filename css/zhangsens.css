@@ -1,0 +1,12 @@
+pre {
+    background-color: #f6f8fa;
+    padding: 0 30px;
+}
+
+pre code {
+    white-space: pre-wrap;
+}
+
+button {}
+
+input.input {}
