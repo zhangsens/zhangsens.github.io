@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://zhangsens.github.io/css/nav.css">
     <link rel="stylesheet" href="https://zhangsens.github.io/css/zhangsens.css">
     <script src="https://zhangsens.github.io/js/nav.min.js"></script>
-    <script src="https://zhangsens.github.io/js/cDraw.min.js"></script>
+    <script src="https://zhangsens.github.io/js/cDanmaku.min.js"></script>
     <style>
         .danmaku {
             width: 100%;
@@ -67,7 +67,8 @@
                     <p style="color:red">*需配合播放器一同使用</p>
                     <pre>
                         <code>
-                            <br><span>var _danmaku = new cDraw({</span>
+                            <br><span>var _danmaku = new cDanmaku({</span>
+                            <br>    <span>type: //类型,</span>
                             <br>    <span>ele: //画布,</span>
                             <br>    <span>media: //播放媒体,</span>
                             <br>    <span>danmaku: //弹幕数据</span>
@@ -78,7 +79,7 @@
                     <p>问:一次性？</p>
                     <p>答:对，就是播放一次后就不会显示弹幕了</p>
                     <p>问:那有屁用啊！！！</p>
-                    <p>答:不要着急，其实里面有一个.danmaku_sort_reset()用于重置弹幕池。上方红字也提到了要配合播放器使用，，在自己需要的时机重置后弹幕池，cDraw会找到你需要播放的弹幕进行显示</p>
+                    <p>答:不要着急，其实里面有一个.danmaku_sort_reset()用于重置弹幕池。上方红字也提到了要配合播放器使用，，在自己需要的时机重置后弹幕池，cDanmaku会找到你需要播放的弹幕进行显示</p>
                     <p>例如本例子，视频播放结束后会重置弹幕池，再一次播放视频，看到的弹幕是和第一次一样的</p>
                     <pre>
                         <code>
@@ -195,13 +196,13 @@
         // video.addEventListener("playing", function() {});
         // video.addEventListener("pause", function() {});
         //弹幕配置
-        var _danmaku = new cDraw({
+        var _danmaku = new cDanmaku({
             type: 1,
             ele: document.querySelector("canvas"),
             media: video,
             danmaku: danmaku
         });
-        var _danmaku_zhibo = new cDraw({
+        var _danmaku_zhibo = new cDanmaku({
             type: 0,
             ele: document.querySelector("#zhibo")
         });
