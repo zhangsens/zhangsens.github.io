@@ -17,6 +17,7 @@
 body {
     margin: 0;
     padding: 0;
+    cursor: url(https://github.com/zhangsens/zhangsens.github.io/blob/master/img/ico/yudachi.png?raw=ture), url(https://github.com/zhangsens/zhangsens.github.io/blob/master/img/ico/yudachi.png?raw=ture), auto;
 }
 
 .header {
@@ -82,9 +83,7 @@ body {
     width: 100%;
 }
 
-.body {
-    cursor: url(https://github.com/zhangsens/zhangsens.github.io/blob/master/img/ico/yudachi.png?raw=ture);
-}
+.body {}
 
 .body setion,
 .body article {
@@ -135,6 +134,11 @@ body {
     margin: auto;
 }
 
+.my-info .account img {
+    width: 100%;
+    height: 100%;
+}
+
 .article {
     margin: 20px;
 }
@@ -146,3 +150,16 @@ body {
 .footer {
     font-family: cursive;
 }
+
+
+/* 3d翻转的效果  看看哪里可以加 */
+
+
+/* .scroll-3d {
+    transition: 1s all ease;
+    transform: perspective(2500px) rotateX(-90deg);
+}
+
+.scroll-3d:hover {
+    transform: perspective(2500px) rotateX(0deg);
+} */
