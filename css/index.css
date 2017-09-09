@@ -82,7 +82,9 @@ body {
     width: 100%;
 }
 
-.body {}
+.body {
+    cursor: url(https://github.com/zhangsens/zhangsens.github.io/blob/master/img/ico/yudachi.png?raw=ture);
+}
 
 .body setion,
 .body article {
@@ -91,6 +93,46 @@ body {
     border-radius: 5px;
     margin: 20px 30px;
     box-shadow: 0px 0px 10px #012345;
+}
+
+.body article:hover {
+    margin: 20px 20px;
+    box-shadow: 0px 0px 20px #012345;
+}
+
+.my-info {
+    width: 800px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #012345;
+}
+
+.pd10 {
+    padding: 10px;
+}
+
+.fl {
+    display: flex;
+}
+
+.fg1 {
+    flex-grow: 1;
+}
+
+.my-info>div {
+    padding: 0 30px;
+}
+
+.my-info .poi {
+    padding: 10px 45px;
+}
+
+.my-info .account {
+    width: 200px;
+    height: 200px;
+    margin: auto;
 }
 
 .article {

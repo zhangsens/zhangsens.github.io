@@ -1,0 +1,20 @@
+---
+layout: page
+title: Yolook's home
+---
+
+{% for post in site.posts %}
+<article>
+	<div class="article">
+		<header>
+	        <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+	        <small>{{ post.date | date:"%Y-%m-%d"}}</small>
+	    </header>
+	    <hr>
+	    <div>
+	    	<p>๑乛◡乛๑外边不给看</p>
+	    	<p><a href="{{ site.baseurl }}{{ post.url }}">点击查看全文</a></p>
+	    </div>
+	</div>
+</article>
+{% endfor %}
