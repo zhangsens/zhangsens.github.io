@@ -1,6 +1,9 @@
 const head = document.head;
 const style = document.createElement("style");
 head.append(style);
+const body = document.querySelector(".body");
+const bgUl = document.createElement("ul");
+body.append(bgUl);
 
 const list = [`48433698_p0.jpg`,
     `64899108_p0.png`,
@@ -15,12 +18,9 @@ const list = [`48433698_p0.jpg`,
     `60396265_p0.jpg`
 ];
 const _style = [];
+const bgNode = [];
 for (var i = 0; i < 5; i++) {
     var int = Math.floor(Math.random() * list.length);
-    if (int > list.length) {
-        i--;
-        continue;
-    }
     _style.push(`.bg ul li:nth-child(${i+1}) span{
         background:url(../img/bg/${list[int]}) no-repeat center fixed;
         background-size:cover;
@@ -29,8 +29,10 @@ for (var i = 0; i < 5; i++) {
         height: 100%;
         transition: 10s transform linear;
     }`);
+    bgNode.push(`<li><span></span></li>`);
 }
 style.innerHTML = _style.join("");
+bgUl.innerHTML = bgNode.join("");
 
 var nth = 0;
 const lis = document.querySelectorAll(".bg li");
@@ -39,10 +41,10 @@ function bgAnimate() {
     nth = nth < lis.length - 1 ? ++nth : 0;
     for (var i = 0; i < lis.length; i++) {
         if (i == nth) {
-            lis[i].firstChild.style.transform = `scale(1.2)`;
+            lis[i].firstElementChild.style.transform = `scale(1.2)`;
             lis[i].style.opacity = 1;
         } else {
-            lis[i].firstChild.style.transform = `scale(1)`;
+            lis[i].firstElementChild.style.transform = `scale(1)`;
             lis[i].style.opacity = 0;
         }
 
