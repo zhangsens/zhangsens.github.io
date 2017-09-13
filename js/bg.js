@@ -2,8 +2,11 @@ const head = document.head;
 const style = document.createElement("style");
 head.append(style);
 const body = document.querySelector(".body");
+const bg = document.createElement("div");
 const bgUl = document.createElement("ul");
-body.append(bgUl);
+bg.className = "bg";
+body.append(bg);
+bg.append(bgUl);
 
 const list = [`48433698_p0.jpg`,
     `64899108_p0.png`,
