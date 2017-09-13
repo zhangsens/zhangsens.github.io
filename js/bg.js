@@ -16,7 +16,7 @@ const list = [`48433698_p0.jpg`,
 const _style = [];
 
 for (var i = 0; i < 5; i++) {
-    var int = Math.floor(Math.random() * (list.length + 1));
+    var int = Math.floor(Math.random() * list.length);
     if (int > list.length) {
         i--;
         continue;
