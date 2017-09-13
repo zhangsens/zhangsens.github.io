@@ -39,10 +39,10 @@ function bgAnimate() {
     nth = nth < lis.length - 1 ? ++nth : 0;
     for (var i = 0; i < lis.length; i++) {
         if (i == nth) {
-            lis[i].style.transform = `scale(1.2)`;
+            lis[i].firstChild.style.transform = `scale(1.2)`;
             lis[i].style.opacity = 1;
         } else {
-            lis[i].style.transform = `scale(1)`;
+            lis[i].firstChild.style.transform = `scale(1)`;
             lis[i].style.opacity = 0;
         }
 
