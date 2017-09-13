@@ -3,7 +3,7 @@ layout: page
 title: Yolook's home
 ---
 
-<div class="my-info">
+<div class="my-info scroll-3d">
     <div>
         <div class="pd10 fl">
             <div class="fg1">
@@ -27,9 +27,15 @@ title: Yolook's home
                     <img src="https://github.com/zhangsens/zhangsens.github.io/blob/master/img/ico/steam.png?raw=ture" />
                 </a>
             </p>
-            <p style="text-align:right;">
-                <a href="https://zhangsens.github.io/page">快来看看这里都有什么吧（并没有</a>
+            <p style="text-align:center;">
+                <a class="to-page" href="https://zhangsens.github.io/page">&gt;快来看看这里都有什么吧（并没有&lt;</a>
             </p>
         </div>
     </div>
 </div>
+<script>
+    var target = document.querySelector(".my-info");
+    var classArr = target.className.split(" ");
+    classArr.push("scroll-3d-one")
+    target.className = classArr.join(" ");
+</script>

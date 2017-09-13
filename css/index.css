@@ -1,5 +1,6 @@
 ::-webkit-scrollbar {
     width: 8px;
+    height: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -20,6 +21,19 @@ body {
     cursor: url(https://github.com/zhangsens/zhangsens.github.io/blob/master/img/ico/yudachi.png?raw=ture), url(https://github.com/zhangsens/zhangsens.github.io/blob/master/img/ico/yudachi.png?raw=ture), auto;
 }
 
+a {
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
 .header {
     font-family: 幼圆;
     font-size: 20px;
@@ -38,16 +52,15 @@ body {
 
 .header-nav {
     position: relative;
+    width: 100%;
 }
 
 .header-nav ul {
     padding-left: 15em;
     height: 80px;
-    margin: 0;
 }
 
 .header-nav ul li {
-    list-style: none;
     float: left;
     line-height: 80px;
     height: 80px;
@@ -83,7 +96,9 @@ body {
     width: 100%;
 }
 
-.body {}
+.body {
+    padding: 50px 0px;
+}
 
 .body setion,
 .body article {
@@ -94,18 +109,31 @@ body {
     box-shadow: 0px 0px 10px #012345;
 }
 
-.body article:hover {
+.body .select:hover {
     margin: 20px 20px;
     box-shadow: 0px 0px 20px #012345;
 }
 
 .my-info {
     width: 800px;
-    margin: 50px auto;
+    margin: 0px auto;
     background-color: #ffffff;
     border: 1px solid #000000;
     border-radius: 5px;
     box-shadow: 0px 0px 10px #012345;
+}
+
+.my-info .to-page {
+    text-decoration: none;
+    font-family: serif;
+    font-size: 20px;
+    font-weight: 900;
+    color: hsla(0, 100%, 100%, 1);
+    text-shadow: 0px 0px 10px hsla(0, 0%, 0%, 1);
+}
+
+.my-info .to-page:hover {
+    text-shadow: 0px 0px 10px hsla(0, 0%, 50%, 1);
 }
 
 .pd10 {
@@ -151,15 +179,32 @@ body {
     font-family: cursive;
 }
 
-
-/* 3d翻转的效果  看看哪里可以加 */
-
-
-/* .scroll-3d {
+.scroll-3d {
     transition: 1s all ease;
     transform: perspective(2500px) rotateX(-90deg);
 }
 
-.scroll-3d:hover {
-    transform: perspective(2500px) rotateX(0deg);
-} */
+.scroll-3d-one {
+    transform: perspective(2500px) rotateX(360deg) !important;
+}
+
+.bg {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    z-index: -1;
+}
+
+.bg ul,
+.bg ul li {
+    height: 100%;
+    width: 100%;
+}
+
+.bg ul li {
+    opacity: 0;
+    background-size: cover;
+}
