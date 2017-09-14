@@ -7,5 +7,13 @@
     {{ content }}
 </body>
 <script type="text/javascript" src="{{ site.baseurl }}js/bg.js"></script>
-
+<script>
+window.onscroll = function(){
+	if(window.scrollY>=300){
+        document.querySelector(".header-nav").style.position = "fixed";
+    }else{
+        document.querySelector(".header-nav").style.position = "relative";
+    }
+}
+</script>
 </html>

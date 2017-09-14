@@ -25,7 +25,7 @@ const bgNode = [];
 for (var i = 0; i < 5; i++) {
     var int = Math.floor(Math.random() * list.length);
     _style.push(`.bg ul li:nth-child(${i+1}) span{
-        background:url(../img/bg/${list[int]}) no-repeat center fixed;
+        background:url(https://zhangsens.github.io/img/bg/${list[int]}) no-repeat center fixed;
         background-size:cover;
         display: block;
         width: 100%;
@@ -54,4 +54,7 @@ function bgAnimate() {
     }
     setTimeout(bgAnimate, 10000);
 }
-bgAnimate();
+
+window.onload = function() {
+    bgAnimate();
+};
