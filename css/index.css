@@ -18,7 +18,7 @@
 body {
     margin: 0;
     padding: 0;
-    cursor: url(https://github.com/zhangsens/zhangsens.github.io/blob/master/img/ico/yudachi.png?raw=ture), url(https://github.com/zhangsens/zhangsens.github.io/blob/master/img/ico/yudachi.png?raw=ture), auto;
+    cursor: url(https://zhangsens.github.io/img/ico/yudachi.png), url(https://zhangsens.github.io/img/ico/yudachi.png), auto;
 }
 
 a {
